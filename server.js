@@ -6,7 +6,7 @@ var path = require('path');
 
 // Creates an instance of "express server"
 var app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3306;
 
 //connection
 var connection = require('./config/connection.js')
