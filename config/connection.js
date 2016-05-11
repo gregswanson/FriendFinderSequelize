@@ -4,7 +4,7 @@ var Sequelize = require("sequelize");
 var source = {
 
     localhost: {
-        port: 3306,
+        port: 3000,
         host: 'localhost',
         user: 'root',
         //password: "",

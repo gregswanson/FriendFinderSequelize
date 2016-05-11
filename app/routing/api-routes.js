@@ -1,14 +1,17 @@
-//var friends 		= require('../data/friends.js');
-var path 			= require('path');
-var connection = require('../../config/connection.js')
+var Friends 		= require('../../model/friends.js');
+//var path 			= require('path');
+//var connection = require('../../config/connection.js')
+
+
 module.exports = function(app){
 	//API Routes
 	app.get('/API/friends', function(req, res){
-		var queryString = 'SELECT * FROM friends';
-		connection.query(queryString, function(err, result) {
-     		res.json(result);
-           });
-        
+
+		Friends.findAll({})
+		.then(function(result){
+			res.json(result);
+		})
+
 	});
 
 	
@@ -33,23 +36,15 @@ module.exports = function(app){
 		var question9 = parseInt(newscore[8]);
 		var question10 = parseInt(newscore[9]);
 		 console.log(name);
-/////////////////////////////////////////
-
-//push newFriend object to mySQL	
-	var queryString2 = 'INSERT INTO friends (name, photo, score1, score2, score3, score4, score5, score6, score7, score8, score9, score10) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);'; 
-            connection.query(queryString2, [name, photo, question1, question2, question3, question4, question5, question6, question7, question8, question9, question10], function(err, result) {
-     		console.log("Success");
-           });
 
 
+	Friends.findAll({})
+		.then(function(result){
+		// 	res.json(result);
+		// })
 
-
-/////////////////////////////////////////
-
-
-
-		var queryString = 'SELECT * FROM friends';
-		connection.query(queryString, function(err, result) {
+		// var queryString = 'SELECT * FROM friends';
+		// connection.query(queryString, function(err, result) {
      		
           
 
@@ -92,6 +87,26 @@ module.exports = function(app){
 
         //res.redirect('/');
 	});
+
+		/////////////////////////////////////////
+
+//push newFriend object to mySQL
+	Friends.create({
+			name: name,
+			photo: photo,
+			score1: question1,
+			score2: question2,
+			score3: question3,
+			score4: question4,
+			score5: question5,
+			score6: question6,
+			score7: question7,
+			score8: question8,
+			score9: question9,
+			score10: question10,
+		});
+
+/////////////////////////////////////////
 
  });
 
