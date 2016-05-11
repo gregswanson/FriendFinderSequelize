@@ -1,1 +1,1 @@
-# FriendFinderSequelize
+# FriendFinder

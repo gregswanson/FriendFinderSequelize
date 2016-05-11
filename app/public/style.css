@@ -1,0 +1,264 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    min-height:100%;
+}
+
+
+
+.jumbotron {
+ margin-top: 50px;
+}
+
+.normal {
+    font-weight: 400;
+}
+
+.bold{
+    font-weight: 800;
+}
+
+.semibold{
+    font-weight: 700;
+}
+/* survey button */
+
+.purple {
+    color: #9840fb;
+}
+
+hr{
+    border: 1px solid #cb9ffd;
+}
+
+.surveyButton {
+    background-color: #9840fb;
+    color: #ffffff;
+    border: 1px solid #9840fb;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+.surveyButton.active {
+    background-color: #9840fb !important;
+    color: #ffffff;
+    border: 1px solid #9840fb;
+}
+
+
+
+.surveyButton:hover {
+    background-color: #cb9ffd;
+    color: #ffffff;
+    border: 1px solid #9840fb;
+}
+
+.surveyButton.active:hover {
+    background-color: #9840fb;
+    color: #ffffff;
+    border: 1px solid #9840fb;
+}
+
+.surveyButton:focus {
+     background-color: #cb9ffd;
+    color: #ffffff;
+    border: 1px solid #9840fb;
+}
+
+
+
+
+
+/* survey button end */   
+
+
+
+
+.aboutyou {
+	border: 1px solid #9840fb;
+	padding: 20px 10px;
+	border-radius: 5px;
+    background-color: #9840fb;
+    color: #ffffff;
+}
+
+.btn-group{
+	width: 100%;
+	display: inline-block;
+}
+
+
+.btnform {
+	width:20%;
+    color: #9840fb;
+    border: 1px solid #9840fb;
+}
+
+.btnform.active {
+    background-color: #9840fb !important;
+    color: #ffffff;
+    border: 1px solid #9840fb;
+}
+
+.btn:active {
+    background-color: #9840fb;
+    color: #ffffff;
+    border: 1px solid #9840fb;
+}
+
+.btn-default:active {
+    background-color: #9840fb !important;
+    color: #ffffff !important;
+    border: 1px solid #9840fb;
+}
+
+.btnform:hover {
+    background-color: #cb9ffd;
+    color: #ffffff;
+    border: 1px solid #9840fb;
+}
+
+.btnform.active:hover {
+    background-color: #9840fb;
+    color: #ffffff;
+    border: 1px solid #9840fb;
+}
+
+.btnform:focus {
+     background-color: #cb9ffd;
+    color: #ffffff;
+    border: 1px solid #9840fb;
+}
+
+.inputtxt {
+    border: 1px solid #9840fb;
+
+}
+
+/* submit button */
+
+.submitButton {
+    background-color: #9840fb;
+    color: #ffffff;
+    border: 1px solid #9840fb;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    font-size: 2em;
+}
+
+.submitButton.active {
+    background-color: #9840fb !important;
+    color: #ffffff;
+}
+
+
+
+.btn-default:active {
+    background-color: #9840fb !important;
+    color: #ffffff !important;
+}
+
+.submitButton:hover {
+    background-color: #cb9ffd;
+    color: #ffffff;
+}
+
+.submitButton.active:hover {
+    background-color: #9840fb;
+    color: #ffffff;
+}
+
+.submitButton:focus {
+     background-color: #cb9ffd;
+    color: #ffffff;
+}
+
+/* submit button end */
+
+
+/*
+.btnform.active, .btnform:active {
+    background-color: #51a3db;
+    color: #ffffff;
+}
+
+
+.btnform.hover, .btnform:hover {
+    background-color: #bdd3dd;
+}
+*/
+
+#matchImg{
+    max-width: 200px;
+}
+
+.modal-content{
+    border-color: #000;
+    margin-top: 100px;
+}
+
+.modal-header {
+    background-color: #9840fb;
+    border-color: #9840fb;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.modal-title {
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 700; 
+}
+
+.modal-body {
+    border: none;
+}
+
+.modalText {
+    color: #000;
+    font-size: 1.5em;
+}
+
+.modalBtn {
+    background-color: #9840fb;
+    border-color: #9840fb;
+    color: #fff;
+}
+
+.modalBtn:hover {
+    background-color: #cb9ffd;
+    border-color: #cb9ffd;
+    color: #fff;
+}
+
+.modal-footer {
+    border-top: none; 
+}
+
+.question {
+    margin-top: 30px;
+}
+
+#matchName {
+    margin: 20px auto;
+}
+
+.modalBtn2 {
+    background-color: #9840fb;
+    border-color: #9840fb;
+    color: #fff;
+}
+
+.modalBtn2:hover {
+    background-color: #cb9ffd;
+    border-color: #cb9ffd;
+    color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    .btnform {
+        width: 100%;
+        border-radius: 0px;
+
+    }
+}
