@@ -4,7 +4,7 @@ var Sequelize = require("sequelize");
 var source = {
 
     localhost: {
-        port: 3000,
+        port: 3306,
         host: 'localhost',
         user: 'root',
         //password: "",
@@ -25,6 +25,7 @@ var selectedSource = source.jawsDB;
 var sequelize = new Sequelize(selectedSource.database, selectedSource.user, selectedSource.password, {
   host: selectedSource.host,
   dialect: 'mysql',
+  define: { timestamps: false },
 
   pool: {
     max: 5,

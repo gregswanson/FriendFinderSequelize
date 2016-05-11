@@ -7,8 +7,7 @@ module.exports = function(app){
 	//API Routes
 	app.get('/API/friends', function(req, res){
 
-		Friends.findAll({})
-		.then(function(result){
+		Friends.findAll({}).then(function(result){
 			res.json(result);
 		})
 
@@ -40,15 +39,7 @@ module.exports = function(app){
 
 	Friends.findAll({})
 		.then(function(result){
-		// 	res.json(result);
-		// })
-
-		// var queryString = 'SELECT * FROM friends';
-		// connection.query(queryString, function(err, result) {
-     		
-          
-
-
+	
 	for (var i = 0; i < result.length; i++) {
 		var absoluteScore = Math.abs(result[i].score1 - question1) +
 							Math.abs(result[i].score2 - question2) +
@@ -65,7 +56,7 @@ module.exports = function(app){
 	}
 
 
-// 	//find the lowest matching score
+//find the lowest matching score
 	var index = 0;
 	var value = matchScore[0];
 	for (var i = 1; i < matchScore.length; i++) {
@@ -78,11 +69,6 @@ module.exports = function(app){
 // //send the friend with the lowest matching score
 	res.send(result[index]);
 
-
-	
-
-	//console.log(index);
-	
 	
 
         //res.redirect('/');
@@ -90,7 +76,8 @@ module.exports = function(app){
 
 		/////////////////////////////////////////
 
-//push newFriend object to mySQL
+//push newFriend object to mySQL after match has been made
+	
 	Friends.create({
 			name: name,
 			photo: photo,
